@@ -5,6 +5,7 @@ const nextConfig = {
 	images: {
 		domains: ["images.punkapi.com"],
 	},
+	optimizeFonts: false,
 };
 
 module.exports = nextConfig;
