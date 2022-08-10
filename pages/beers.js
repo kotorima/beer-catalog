@@ -1,17 +1,15 @@
 import MainContainer from "../components/MainContainer";
-import { Link } from "../components/CardProduct";
-import CardProduct from "../components/CardProduct";
-import Button from "@material-ui/core/Button";
+import CardProduct from "../components/CardProduct/CardProduct";
+import Button from "@mui/material/Button";
+
 const Beers = ({ beers }) => {
-	// console.log(beers);
 	return (
 		<MainContainer keywords={"beers"} title='Catalog'>
-			<Button variant='contained'>Keke</Button>
+			<Button variant='contained'>Kek</Button>
 			<ul>
 				{beers.map(({ id, name, description, image_url }) => (
 					<li key={id}>
 						<CardProduct
-							component={Link}
 							id={id}
 							name={name}
 							image={image_url}
