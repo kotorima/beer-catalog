@@ -1,0 +1,10 @@
+@use "@fontsource/roboto/scss/mixins" as Roboto;
+@use "@fontsource/josefin-sans/scss/mixins" as Josefin;
+
+@include Josefin.fontFace($fontName: "Josefin Regular");
+@include Josefin.fontFaceCustom($fontName: "Josefin Bold", $weight: 700);
+@include Roboto.fontFace($fontName: "Roboto Regular");
+
+$josefinRegular: "Josefin Regular", sans-serif;
+$josefinBold: "Josefin Bold", sans-serif;
+$robotoRegular: "Roboto Regular", sans-serif;
