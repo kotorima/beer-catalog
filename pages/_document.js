@@ -9,7 +9,6 @@ export default class MyDocument extends Document {
 			<Html lang='en'>
 				<Head>
 					<meta name='theme-color' content={theme.palette.primary.main} />
-					<link rel='shortcut icon' href='/public/favicon.ico' />
 					{this.props.emotionStyleTags}
 				</Head>
 				<body>
