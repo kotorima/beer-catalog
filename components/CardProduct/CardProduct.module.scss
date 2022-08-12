@@ -1,9 +1,41 @@
+@import "../../styles/common/mixins";
+
+.card {
+	text-decoration: none;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+	transition: box-shadow 0.2s ease-in-out;
+	display: block;
+	border-radius: 4px;
+	background-color: rgb(168, 88, 59);
+
+	&:hover {
+		box-shadow: rgba(0, 0, 0, 0.12) 5px 5px 10px 0px;
+
+		> div {
+			background-color: rgba(255, 255, 255, 0.8);
+		}
+	}
+
+	> div {
+		background-color: rgba(255, 255, 255, 1);
+		transition: background-color 0.2s ease-in-out;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
 .overflow {
-	text-overflow: ellipsis;
-	overflow: hidden;
+	@include text-overflow(4);
 }
 
 .img {
 	object-fit: contain;
 	height: 240px;
+	padding-top: 20px;
+}
+
+.headline {
+	@include text-overflow(1);
 }

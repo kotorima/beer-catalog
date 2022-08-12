@@ -12,7 +12,7 @@ const NextComposed = forwardRef(function NextComposed({ href, ...props }, ref) {
 
 const CustomLink = ({ href, children, ...props }) => {
 	return (
-		<MuiLink component={NextComposed} href={href}>
+		<MuiLink component={NextComposed} href={href} {...props}>
 			{children}
 		</MuiLink>
 	);

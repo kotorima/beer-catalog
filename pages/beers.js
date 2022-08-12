@@ -4,12 +4,12 @@ import CardProduct from "../components/CardProduct/CardProduct";
 import styles from "../styles/beer.module.scss";
 
 const Beers = ({ beers }) => {
-	const { list, card } = styles;
+	const { list } = styles;
 	return (
 		<MainContainer keywords={"beers"} title='Catalog'>
 			<ul className={list}>
 				{beers.map(({ id, name, description, image_url }) => (
-					<li key={id} className={card}>
+					<li key={id}>
 						<CardProduct
 							id={id}
 							name={name}

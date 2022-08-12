@@ -15,13 +15,11 @@ let cx = classNames.bind(styles);
 const CardProduct = ({ id, name, description, image }) => {
 	const { route } = useRouter();
 	const href = `${route}/${id}`;
-	const { overflow, img } = styles;
-	const text = cx({
-		overflow: description.length > 140 ? true : false,
-	});
+	const { overflow, img, headline, card } = styles;
+	const text = cx(description.length > 140 ? overflow : false);
 
 	return (
-		<CustomLink href={href}>
+		<CustomLink href={href} className={card}>
 			<Card variant='outlined'>
 				<CardActionArea>
 					<CardMedia
@@ -31,8 +29,12 @@ const CardProduct = ({ id, name, description, image }) => {
 						alt='green iguana'
 					/>
 					<CardContent>
-						<Typography variant='h5'>{name}</Typography>
-						<p className={text}>{description}</p>
+						<Typography variant='h5' className={headline}>
+							{name}
+						</Typography>
+						<Typography variant='p' className={text}>
+							{description}
+						</Typography>
 					</CardContent>
 				</CardActionArea>
 			</Card>

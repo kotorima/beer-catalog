@@ -4,10 +4,6 @@
 	grid-gap: 20px;
 	list-style: none;
 	margin-left: -20px;
-}
-
-.card {
-	a {
-		text-decoration: none;
-	}
+	position: relative;
+	grid-template-rows: max-content;
 }
