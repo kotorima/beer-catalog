@@ -1,5 +1,6 @@
 @import "~normalize-scss";
 @import "fonts";
+@import "adaptive";
 
 @include normalize();
 
@@ -28,4 +29,17 @@ a {
 		color: white;
 		background: black;
 	}
+}
+
+.page {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.wrapper {
+	margin: 0 auto;
+	height: 100%;
+	@extend .container;
 }

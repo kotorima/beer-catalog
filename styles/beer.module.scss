@@ -1,0 +1,13 @@
+.list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	list-style: none;
+	margin-left: -20px;
+}
+
+.card {
+	a {
+		text-decoration: none;
+	}
+}

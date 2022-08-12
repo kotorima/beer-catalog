@@ -7,7 +7,9 @@ const MainContainer = ({ children, keywords, title }) => {
 				<meta keywords={keywords}></meta>
 				<title>{title}</title>
 			</Head>
-			<div>{children}</div>
+			<div className='page'>
+				<div className='wrapper'>{children}</div>
+			</div>
 		</>
 	);
 };

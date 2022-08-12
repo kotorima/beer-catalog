@@ -1,14 +1,15 @@
+import Button from "@mui/material/Button";
 import MainContainer from "../components/MainContainer";
 import CardProduct from "../components/CardProduct/CardProduct";
-import Button from "@mui/material/Button";
+import styles from "../styles/beer.module.scss";
 
 const Beers = ({ beers }) => {
+	const { list, card } = styles;
 	return (
 		<MainContainer keywords={"beers"} title='Catalog'>
-			<Button variant='contained'>Kek</Button>
-			<ul>
+			<ul className={list}>
 				{beers.map(({ id, name, description, image_url }) => (
-					<li key={id}>
+					<li key={id} className={card}>
 						<CardProduct
 							id={id}
 							name={name}

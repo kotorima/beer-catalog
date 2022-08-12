@@ -1,8 +1,9 @@
-.card {
-	background-color: antiquewhite;
-}
-
 .overflow {
 	text-overflow: ellipsis;
 	overflow: hidden;
+}
+
+.img {
+	object-fit: contain;
+	height: 240px;
 }

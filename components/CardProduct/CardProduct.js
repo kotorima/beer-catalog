@@ -15,18 +15,18 @@ let cx = classNames.bind(styles);
 const CardProduct = ({ id, name, description, image }) => {
 	const { route } = useRouter();
 	const href = `${route}/${id}`;
-	const { card } = styles;
+	const { overflow, img } = styles;
 	const text = cx({
 		overflow: description.length > 140 ? true : false,
 	});
 
 	return (
 		<CustomLink href={href}>
-			<Card variant='outlined' className={card}>
+			<Card variant='outlined'>
 				<CardActionArea>
 					<CardMedia
+						className={img}
 						component='img'
-						height='140'
 						image={image}
 						alt='green iguana'
 					/>
