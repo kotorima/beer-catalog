@@ -44,3 +44,17 @@ a {
 	height: 100%;
 	@extend .container;
 }
+
+.link {
+	padding: 10px 20px;
+	border: solid 1px rgb(100, 149, 237);
+	color: rgb(100, 149, 237);
+	background-color: rgba(100, 149, 237, 0);
+	font-family: $robotoRegular;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+	&:hover {
+		background-color: rgb(100, 149, 237, 1);
+		color: rgb(255, 255, 255);
+	}
+}
