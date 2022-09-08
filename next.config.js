@@ -9,6 +9,7 @@ const nextConfig = {
 	},
 	sassOptions: {
 		includePaths: [path.join(__dirname, "styles")],
+		additionalData: `@import "styles/_fonts.scss"; @import "styles/_adaptive.scss"; @import "styles/_mixins.scss";`,
 	},
 };
 

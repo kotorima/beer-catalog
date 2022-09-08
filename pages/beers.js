@@ -2,13 +2,11 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { CircularProgress } from "@mui/material";
 import MainContainer from "../components/MainContainer";
-import CardProduct from "../components/CardProduct/CardProduct";
+import CardList from "../components/CardList/CardList";
 import Pagination from "../components/Pagination";
-import styles from "../styles/beer.module.scss";
 
 const Beers = ({ productList }) => {
 	const { query, events } = useRouter();
-	const { list } = styles;
 	const countPages = 10;
 	let page = query.page || 1;
 	const [isLoading, setLoading] = useState(false);
@@ -36,18 +34,7 @@ const Beers = ({ productList }) => {
 			) : (
 				<>
 					{productList && productList.length > 0 ? (
-						<ul className={list}>
-							{productList.map(({ id, name, description, image_url }) => (
-								<li key={id}>
-									<CardProduct
-										id={id}
-										name={name}
-										image={image_url}
-										description={description}
-									/>
-								</li>
-							))}
-						</ul>
+						<CardList cards={productList} />
 					) : (
 						<h3>The list is empty or something went wrong</h3>
 					)}

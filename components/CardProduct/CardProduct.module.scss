@@ -1,5 +1,3 @@
-@import "../../styles/common/mixins";
-
 .card {
 	text-decoration: none;
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
@@ -27,7 +25,12 @@
 }
 
 .overflow {
+	color: blue;
 	@include text-overflow(4);
+
+	@include adaptive($desktop1280) {
+		color: red;
+	}
 }
 
 .img {

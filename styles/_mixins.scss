@@ -1,0 +1,21 @@
+@function remify($value) {
+	$u: unit($value);
+
+	@if ($u is "px") {
+		@return unit($value / 16, "rem");
+	} @else {
+		@return unit($value, $u);
+	}
+}
+
+@mixin transition($style: all) {
+	transition: style 0.25s ease-in-out;
+}
+
+@mixin text-overflow($line) {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+}
