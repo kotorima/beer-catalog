@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { Pagination as MuiPagination } from "@mui/material";
 
-const Pagination = ({ countPages, page }) => {
+const Pagination = ({ itemsOnPage, page }) => {
 	const router = useRouter();
 	const { pathname } = router;
 
@@ -14,7 +14,7 @@ const Pagination = ({ countPages, page }) => {
 
 	return (
 		<MuiPagination
-			count={countPages}
+			count={itemsOnPage}
 			page={parseInt(page)}
 			onChange={handleChange}
 		/>

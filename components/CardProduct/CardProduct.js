@@ -15,8 +15,7 @@ let cx = classNames.bind(styles);
 const CardProduct = ({ id, name, description, image }) => {
 	const { route } = useRouter();
 	const href = `${route}/${id}`;
-	const { overflow, img, headline, card } = styles;
-	const text = cx(description.length > 140 ? overflow : false);
+	const { text, img, headline, card } = styles;
 
 	return (
 		<CustomLink href={href} className={card}>

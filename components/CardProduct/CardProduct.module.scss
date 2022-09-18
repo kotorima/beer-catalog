@@ -4,7 +4,8 @@
 	transition: box-shadow 0.2s ease-in-out;
 	display: block;
 	border-radius: 4px;
-	background-color: rgb(168, 88, 59);
+	background-color: rgb(170, 89, 60);
+	height: 100%;
 
 	&:hover {
 		box-shadow: rgba(0, 0, 0, 0.12) 5px 5px 10px 0px;
@@ -17,20 +18,20 @@
 	> div {
 		background-color: rgba(255, 255, 255, 1);
 		transition: background-color 0.2s ease-in-out;
+		height: 100%;
 	}
 
 	a {
 		text-decoration: none;
 	}
+
+	button {
+		height: 100%;
+	}
 }
 
-.overflow {
-	color: blue;
+.text {
 	@include text-overflow(4);
-
-	@include adaptive($desktop1280) {
-		color: red;
-	}
 }
 
 .img {
